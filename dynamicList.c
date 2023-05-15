@@ -192,7 +192,6 @@ int destoryList(DLIST *pHead)
  * @param pHead the head pointer of link list
  * @return 0 success / -1 failure
  */
-
 int printDList(DLIST* pHead)
 {
     DLIST* temp = NULL;
@@ -230,3 +229,4 @@ int main()
 
     return 0;
 }
+
