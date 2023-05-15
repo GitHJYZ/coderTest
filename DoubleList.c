@@ -213,17 +213,11 @@ int  main()
     tailInsert(L,569);
 
     printList(L);
-
     deleteNode(L,11);
-
     deleteNode(L,151);
-
     printList(L);
-
     findNode(L,151);
-
     deleteNode(L,11);
-
     destoryList(L);
     return 0;
 }
