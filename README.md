@@ -8,3 +8,7 @@
 链式队列
 #sequentialStack.c
 顺序栈
+#tree.c
+二叉树的创建和三种遍历方式
+#sequentialLinkList.c
+顺序链表

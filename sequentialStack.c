@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define STACK_SIZE 3 //the stack begin capacity
-#define STACK_INCREMENT 2  //everytime need expend Data
+#define STACK_SIZE 3 //the stack capacity
+#define STACK_INCREMENT 2  //expend capacity
 
 /**
  * define the struct of stack data
@@ -24,7 +24,7 @@ typedef struct {
 /**
  * init the Sequential stack
  * @param S the stack initialized
- * @return 0 success / -1 failure
+ * @return 0 success / -1 malloc failure
  */
 int initStack(Stack *S){
     S->base = (Data*)malloc(STACK_SIZE * sizeof(Data));

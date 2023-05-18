@@ -28,7 +28,7 @@ bool emptyQueue(LinkQueue *q){
 /**
  * init the linkQueue
  * @param q the queue initialized
- * @return 0 success / -1 failure
+ * @return 0 success / -1 malloc failure
  */
 int initQueue(LinkQueue *q){
     emptyQueue(q);
