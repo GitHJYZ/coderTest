@@ -23,7 +23,7 @@ typedef struct node{
  */
 void inputValue(Data *d){
   if(!d) return;
-  printf("请输入数据：\n");
+  printf("please intput data：\n");
   scanf("%d",&d->data);
 }
 
@@ -37,7 +37,7 @@ NODE *creatNode(Data *d){
   NODE *node = (NODE*)malloc(sizeof(NODE));
   if(!node) exit(-1);
   node->d = *d;
-  printf("节点的标记为：");
+  printf("node flag is：");
   fflush(stdin);
   scanf("%c",&node->ch);
   node->lchild = node->rchild = NULL;
@@ -52,7 +52,7 @@ NODE *creatNode(Data *d){
  */
 NODE *creatTree(NODE *tree){
   int tag = 0;
-  printf("是否有左子树或者右子树，如果有，输入1，否则输入0；");
+  printf("Is there a left or right subtree? If so, enter 1; otherwise, enter 0；");
   scanf("%d",&tag);
   if(tag != 0){
     Data d;
@@ -82,7 +82,7 @@ void destroyTree(NODE *tree){
  */
 void outputValue(Data *d){
   if(!d) return;
-  printf("数据%-5d\n",d->data);
+  printf("data%-5d\n",d->data);
 }
 
 /**
