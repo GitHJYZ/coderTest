@@ -130,9 +130,13 @@ int deleteNode(Node* L,int data)
     }
     node = L->next;
     while(node != NULL){
-        if(node->data == data){
+        if((node->data == data) && (node->next != NULL)){
             node->pre->next = node->next;
             node->next->pre = node->pre;
+            node_count++;
+            free(node);
+        }else if((node->data == data) && (node->next == NULL)){
+            node->pre->next = NULL;
             node_count++;
             free(node);
         }
@@ -217,7 +221,9 @@ int  main()
     deleteNode(L,151);
     printList(L);
     findNode(L,151);
+    deleteNode(L,569);
     deleteNode(L,11);
+    printList(L);
     destoryList(L);
     return 0;
 }
