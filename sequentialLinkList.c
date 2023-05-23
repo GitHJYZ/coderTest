@@ -146,7 +146,7 @@ int insertLocSqList(SqList *L,int i, Data *dv){
  */
 int deleteLocSqList(SqList *L,int i){
     if(i < 0 || i > L->length-1) return 0;
-    for(int j = i; j < L->length; j++){
+    for(int j = i+1; j < L->length; j++){
         copyValue(&L->d[j-1],&L->d[j]);
   }
   L->length--;
