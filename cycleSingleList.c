@@ -1,7 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-
+/**
+ * define the struct of list node
+ */
 typedef struct Node{
     int data;
     struct Node* next;
@@ -14,6 +16,10 @@ int reverselist(DLIST *pHead);
 int destoryList(DLIST *pHead);
 int printList(DLIST *pHead);
 
+/**
+ * creat a link list
+ * @return the head pointer of link list's head
+ */
 DLIST* createList()
 {
     DLIST *pHead, *pM, *pCur;
@@ -48,6 +54,13 @@ DLIST* createList()
     return pHead;
 }
 
+/**
+ * insert item in link between pData cData
+ * @param pHead the head pointer of link list
+ * @param pData the data you want to insert before
+ * @param cData the data you want to insert after
+ * @return 0 success / -1 failure
+ */
 int nodeInsert(DLIST *pHead,int pData,int cData)
 {
     DLIST *pM,*pPre,*pCur;
@@ -87,6 +100,12 @@ int nodeInsert(DLIST *pHead,int pData,int cData)
     return 0;
 }
 
+/**
+ * delete item in link list
+ * @param pHead the head pointer of link list
+ * @param data  the data you want to delete
+ * @return 0 success / -1 failure
+ */
 int nodeDelete(DLIST *pHead,int data)
 {
     DLIST *pCur,*pPre;
@@ -121,6 +140,11 @@ int nodeDelete(DLIST *pHead,int data)
     return 0;
 }
 
+/**
+ * reverse item in link list
+ * @param pHead the head pointer of link list
+ * @return 0 success / -1 failure
+ */
 int reverseList(DLIST *pHead)
 {
     DLIST *pTemp,*pPre,*pCur;
@@ -144,6 +168,11 @@ int reverseList(DLIST *pHead)
     return 0;
 }
 
+/**
+ * destory link list
+ * @param pHead the head pointer of link list
+ * @return 0 success / -1 failure
+ */
 int destoryList(DLIST *pHead)
 {
     DLIST *temp =NULL;
@@ -162,6 +191,11 @@ int destoryList(DLIST *pHead)
     return 0;
 }
 
+/**
+ * print all items in a link list
+ * @param pHead the head pointer of link list
+ * @return 0 success / -1 failure
+ */
 int printDList(DLIST *pHead)
 {
     DLIST *temp = NULL;
@@ -195,4 +229,6 @@ int main()
     ret = reverseList(pHead);
     ret = printDList(pHead);
     ret = destoryList(pHead);
+
+    return 0;
 }
